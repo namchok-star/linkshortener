@@ -1,8 +1,37 @@
 import Image from "next/image";
+import Link from "next/link";
+import {
+  Show,
+  SignInButton,
+  SignUpButton,
+  UserButton,
+} from "@clerk/nextjs";
 
 export default function Home() {
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
+      <header className="flex w-full max-w-3xl items-center justify-between px-6 py-4 sm:px-16">
+        <Link className="font-semibold" href="/">
+          LinkShortener
+        </Link>
+        <nav className="flex items-center gap-3" aria-label="Account">
+          <Show when="signed-out">
+            <SignInButton>
+              <button className="rounded-md px-3 py-2 text-sm font-medium hover:bg-black/5 dark:hover:bg-white/10">
+                Sign in
+              </button>
+            </SignInButton>
+            <SignUpButton>
+              <button className="rounded-md bg-foreground px-3 py-2 text-sm font-medium text-background">
+                Sign up
+              </button>
+            </SignUpButton>
+          </Show>
+          <Show when="signed-in">
+            <UserButton />
+          </Show>
+        </nav>
+      </header>
       <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
         <Image
           className="dark:invert h-5 w-[100px]"
