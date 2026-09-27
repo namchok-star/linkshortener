@@ -13,6 +13,11 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 This is a URL-shortening application built with Next.js App Router. For detailed guidelines on specific topics, refer to the modular documents in the `/docs` before making changes.
 ALWAYS refer to the relevant .md file BEFORE generating any code:
 
+## Documentation Index
+
+- [docs/authentication.md](docs/authentication.md) — Clerk auth rules: protecting routes, homepage redirect, modal-only sign-in/sign-up.
+- [docs/ui-components.md](docs/ui-components.md) — shadcn/ui rules: use shadcn components only, no hand-built primitives.
+
 ## Working Rules
 
 - Treat the installed dependencies and source code as authoritative. Do not assume conventions or APIs from another version of Next.js, React, Clerk, Drizzle, or Tailwind.
