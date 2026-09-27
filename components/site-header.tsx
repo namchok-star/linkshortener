@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Show, SignInButton, SignUpButton, UserButton } from "@clerk/nextjs";
+import { Button } from "@/components/ui/button";
 
 export function SiteHeader() {
   return (
@@ -10,14 +11,10 @@ export function SiteHeader() {
       <nav className="flex items-center gap-3" aria-label="Account">
         <Show when="signed-out">
           <SignInButton mode="modal">
-            <button className="rounded-md px-3 py-2 text-sm font-medium hover:bg-black/5 dark:hover:bg-white/10">
-              Sign in
-            </button>
+            <Button variant="ghost">Sign in</Button>
           </SignInButton>
           <SignUpButton mode="modal">
-            <button className="rounded-md bg-foreground px-3 py-2 text-sm font-medium text-background">
-              Sign up
-            </button>
+            <Button>Sign up</Button>
           </SignUpButton>
         </Show>
         <Show when="signed-in">
