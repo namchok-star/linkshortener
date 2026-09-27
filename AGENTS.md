@@ -7,3 +7,17 @@ This version has breaking changes — APIs, conventions, and file structure may 
 This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
 
 <!-- END:nextjs-agent-rules -->
+
+# Project Agent Instructions
+
+This is a URL-shortening application built with Next.js App Router. For detailed guidelines on specific topics, refer to the modular documents in the `/docs` before making changes.
+ALWAYS refer to the relevant .md file BEFORE generating any code:
+
+## Working Rules
+
+- Treat the installed dependencies and source code as authoritative. Do not assume conventions or APIs from another version of Next.js, React, Clerk, Drizzle, or Tailwind.
+- Before changing Next.js behavior, consult the matching guide shipped with the installed package under `node_modules/next/dist/docs/`. This project uses Next.js 16; in particular, request interception is implemented through `proxy.ts`, not the older `middleware.ts` convention.
+- Keep changes focused, preserve existing public behavior unless the task asks to change it, and do not add dependencies when the existing stack can solve the problem.
+- Do not invent product requirements. When URL-shortener behavior is unspecified, identify the missing decision before implementing consequential behavior.
+- Never expose secrets or perform privileged work in client components. Authenticate and authorize each protected read or mutation at the server boundary.
+- Do not edit the generated Next.js instruction block above. Next.js may recreate it automatically.
