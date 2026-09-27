@@ -10,8 +10,7 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 # Project Agent Instructions
 
-This is a URL-shortening application built with Next.js App Router. For detailed guidelines on specific topics, refer to the modular documents in the `/docs` before making changes.
-ALWAYS refer to the relevant .md file BEFORE generating any code:
+This is a URL-shortening application built with Next.js App Router. BEFORE generating, editing, or suggesting ANY code, you MUST identify and read every relevant individual instruction file in `/docs`. This is a mandatory precondition, not an optional reference step. Do not generate code until the applicable documentation has been read.
 
 ## Documentation Index
 
